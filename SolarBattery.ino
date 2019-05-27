@@ -23,7 +23,7 @@ void setup()
 {
 	servohori.attach(10);
 	servohori.write(0);
-	servoverti.attach(9);
+	servoverti.attach(8);
 	servoverti.write(0);
 	// myservo.attach(servoPin);
 	pinMode(controlPin, OUTPUT);
@@ -57,7 +57,8 @@ void loop()
 		delay(1000);
 		if (solarValue < 338)
 		{
-			myservo.write(15);
+			servoverti.write(15);
+			servohori.write(15);
 			// n = 0;
 			// m = 0;
 		}
